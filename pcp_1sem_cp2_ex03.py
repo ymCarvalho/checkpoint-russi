@@ -1,12 +1,12 @@
 # JOÃO PEDRO SANTOS FERREIRA
 
 '''
-INSTITUÇÃO DE ENSINO
+SISTEMA DE NOTAS
 ANALISE SEMESTRAL
 '''
 
 #===================
-# VARIÁVEIS - NOTAS
+# variáveis - notas
 #===================
 notacp1 = float(input("Digite a nota do Checkpoint 01: "))
 notacp2 = float(input("Digite a nota do Checkpoint 02: "))
