@@ -9,6 +9,9 @@ def calcular_descontos_faltas(salario_base, faltas):
 
 
 def calcular_bonus(cargo, bonus):
+    if bonus != 's':
+        return 0
+
     if bonus == 's':
         if cargo == 1:
             return 1000
@@ -26,7 +29,7 @@ cargo = int(input("Digite seu cargo: (1-Gerente, 2-Analista, 3-Assistente, 4-Est
 salario_base = float(input("Digite seu salário base: "))
 total_horas = int(input("Digite seu total de horas extras: "))
 total_faltas = int(input("Digite seu total de faltas: "))
-bonus = input("Recebeu bônus? (S ou N): ")
+bonus = input("Recebeu bônus? (S ou N): ").lower()
 
 
 horas_extras = calcular_horas_extras(salario_base, total_horas)
@@ -34,8 +37,8 @@ descontos = calcular_descontos_faltas(salario_base, total_faltas)
 bonus_valor = calcular_bonus(cargo, bonus)
 
 total_acrescimos = horas_extras + bonus_valor
-salario_bruto = salario_base + horas_extras
-salario_final = salario_bruto + bonus_valor - descontos
+salario_bruto = salario_base + total_acrescimos
+salario_final = salario_bruto - descontos
 
 print("\n--- RESUMO ---")
 print(f"Salário base: R$ {salario_base:.2f}")
