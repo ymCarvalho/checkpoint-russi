@@ -1,5 +1,4 @@
 # JOÃO PEDRO SANTOS FERREIRA
-
 '''
 SISTEMA DE NOTAS
 ANALISE SEMESTRAL
@@ -20,29 +19,28 @@ notags = float(input("Digite a nota da Global Solution: "))
 #==============================
 if notacp1 <= notacp2 and notacp1 <= notacp3:
     print(f"A nota da CP01: {notacp1} será descartada.")
+    menor_cp = notacp1
+
 elif notacp2 <= notacp1 and notacp2 <= notacp3:
     print(f"A nota da CP02: {notacp2} será descartada.")
+    menor_cp = notacp2
+
 else:
     print(f"A nota da CP03: {notacp3} será descartada.")
+    menor_cp = notacp3
 
-#=============================
-# cálculo para os checkpoints
-#=============================
-if notacp1 <= notacp2 and notacp1 <= notacp3:
-    notacp = (notacp2 + notacp3)
-elif notacp2 <= notacp1 and notacp2 <= notacp3:
-    notacp = (notacp1 + notacp3)
-else:
-    notacp = (notacp1 + notacp2)
+notacp = notacp1 + notacp2 + notacp3 - menor_cp
 
 #================================
 # cálculo da média (sem os pesos)
 #=================================
-media = float(((notacp + notasp1 + notasp2) / 4) * 0.4) + notags * 0.6
+media = ((notacp + notasp1 + notasp2) / 4) * 0.4 + notags * 0.6
+
 print(f"A média sem o peso semestral: {media:.1f}")
 
 #================================
 # cálculo da média (com os pesos)
 #=================================
-media_peso = float(media * 0.4)
+
+media_peso = media * 0.4
 print(f"A média normal com o peso semestral: {media_peso:.1f}")
