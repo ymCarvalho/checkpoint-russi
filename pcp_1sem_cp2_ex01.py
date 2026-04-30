@@ -10,7 +10,7 @@ DE CAMINHÕES
 #===========
 estado = int(input("Digite o código do estado de origem da carga (de 1 a 5): "))
 peso_carga = float(input("Digite o peso da carga (em toneladas): "))
-codigo_carga = int(input("Digite o código da carga: "))
+codigo_carga = int(input("Digite o código da carga (10 a 40): "))
 
 #=================================
 # CONVERSÃO DE TONELADAS PARA KG

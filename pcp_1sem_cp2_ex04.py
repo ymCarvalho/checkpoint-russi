@@ -1,3 +1,5 @@
+# Yasmin Mayer
+
 def calcular_horas_extras(salario_base, total_horas):
     hora_extra = (0.015 * salario_base) * total_horas
     return hora_extra

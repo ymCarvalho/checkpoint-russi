@@ -1,3 +1,5 @@
+# Ulysses Gomes
+
 # =========================
 # definindo as funções de cálculo
 # =========================
